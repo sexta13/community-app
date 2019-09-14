@@ -1,13 +1,16 @@
 const CopyWebpackPlugin = require('copy-webpack-plugin');
 const WorkboxPlugin = require('workbox-webpack-plugin');
 const WebpackPwaManifest = require('webpack-pwa-manifest');
-
+const WebpackBar = require('webpackbar');
 const path = require('path');
 
 let publicPath = process.env.CDN_URL || '/api/cdn/public';
 publicPath += '/static-assets';
 
 module.exports = {
+  optimization: {
+    minimize: false,
+  },
   entry: {
     'loading-indicator-animation': './src/client/loading-indicator-animation',
   },
@@ -43,6 +46,9 @@ module.exports = {
     ],
   },
   plugins: [
+    new WebpackBar({
+      profile: true,
+    }),
     new CopyWebpackPlugin([{
       from: path.resolve(__dirname, '../../src/assets/mock-data'),
       to: path.resolve(__dirname, '../../build/mock-data'),
