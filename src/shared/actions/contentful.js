@@ -1,11 +1,12 @@
 import _ from 'lodash';
 import { getService } from 'services/contentful';
-import { redux, config } from 'topcoder-react-utils';
+import topcoderUtils from 'topcoder-react-utils';
 import { removeTrailingSlash } from 'utils/url';
 import { menuItemBuilder, target as urlTarget } from 'utils/contentful';
 import { services } from 'topcoder-react-lib';
 
 const ERRMSG_UNKNOWN_TARGET = 'Unknown action target';
+const { redux, config } = topcoderUtils;
 
 export const TARGETS = {
   ASSETS: 'assets',

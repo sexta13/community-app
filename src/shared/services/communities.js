@@ -1,9 +1,11 @@
 /**
  * Isomorphic Communities service.
  */
-import { isomorphy } from 'topcoder-react-utils';
+import topcoderUtils from 'topcoder-react-utils';
 import { services } from 'topcoder-react-lib';
 
+console.log(services);
+const { isomorphy } = topcoderUtils;
 const preGetService = services.communities.getService;
 
 /**

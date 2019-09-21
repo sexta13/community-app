@@ -10,7 +10,9 @@ import _ from 'lodash';
 import fetch from 'isomorphic-fetch';
 import { logger } from 'topcoder-react-lib';
 import qs from 'qs';
-import { config, isomorphy } from 'topcoder-react-utils';
+import topcoderUtils from 'topcoder-react-utils';
+
+const { config, isomorphy } = topcoderUtils;
 
 /* Service-side Contentful services module. Some of its functionality will be
  * reused by our isomorphic code when executed at the server-side. */

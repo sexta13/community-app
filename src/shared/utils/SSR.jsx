@@ -6,7 +6,10 @@ import React from 'react';
 import { Provider } from 'react-redux';
 import { withRouter } from 'react-router';
 import { StaticRouter } from 'react-router-dom';
-import { isomorphy, webpack } from 'topcoder-react-utils';
+import topcoderUtils from 'topcoder-react-utils';
+
+const { isomorphy, webpack } = topcoderUtils;
+
 
 let ReactDOM;
 if (isomorphy.isServerSide()) {
